@@ -17,14 +17,17 @@
     "start": "probot run ./index.js",
     "lint": "standard --fix",
     "test": "jest && standard",
-    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage",
+    "prepush": "npm run test"
   },
   "dependencies": {
     "probot": "^7.0.0"
   },
   "devDependencies": {
+    "husky": "^0.14.3",
     "jest": "^22.4.3",
     "nodemon": "^1.17.2",
+    "prettier": "1.13.7",
     "smee-client": "^1.0.2",
     "standard": "^10.0.3"
   },
@@ -35,5 +38,9 @@
     "env": [
       "jest"
     ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }
