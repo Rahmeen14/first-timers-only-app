@@ -10,6 +10,11 @@ describe('isCommentAskingForClaimingTheIssue()', () => {
       createCommentBody('Can I work on this?')
     )
 
+    // YO!
+    // Connecting audio lol
+    // there?
+    // it's taking too much time
+
     expect(result).toBe(true)
   })
 
