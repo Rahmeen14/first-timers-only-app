@@ -2,8 +2,9 @@ const fetch = require('node-fetch')
 
 const CLAIMING_COMMENTS = [
   'Can I work on this?',
-  'I want to work on this.',
-  'I wanna claim this!'
+  'I want to work on this',
+  'I wanna claim this!',
+  'I wish to work on this'
 ]
 
 const FIRST_TIMERS_LABELS = ['first-timers-only']
