@@ -23,6 +23,9 @@
   "dependencies": {
     "probot": "^7.0.0"
   },
+  "jest": {
+    "testURL": "http://localhost:1234"
+    },
   "devDependencies": {
     "husky": "^0.14.3",
     "jest": "^22.4.3",
