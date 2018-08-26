@@ -12,9 +12,47 @@ describe('isCommentAskingForClaimingTheIssue()', () => {
 
     expect(result).toBe(true)
   })
+  it('returns true for "I want to work on this"', () => {
+    const result = isCommentAskingForClaimingTheIssue(
+      createCommentBody('I want to work on this')
+    )
+    expect(result).toBe(true)
+  })
+  it('returns true for "I wish to work on this"', () => {
+    const result = isCommentAskingForClaimingTheIssue(
+      createCommentBody('I wish to work on this')
+    )
+    expect(result).toBe(true)
+  })
+
+  it('returns true for "I wanna claim this!"', () => {
+    const result = isCommentAskingForClaimingTheIssue(
+      createCommentBody('I wanna claim this!')
+    )
+
+    expect(result).toBe(true)
+  })
 
   it('returns false for "LGTM"', () => {
     const result = isCommentAskingForClaimingTheIssue(createCommentBody('LGTM'))
+
+    expect(result).toBe(false)
+  })
+
+  it('returns false for "Nice suggestion"', () => {
+    const result = isCommentAskingForClaimingTheIssue(createCommentBody('Nice suggestion'))
+
+    expect(result).toBe(false)
+  })
+
+  it('returns false for "You can work on this"', () => {
+    const result = isCommentAskingForClaimingTheIssue(createCommentBody('You can work on this'))
+
+    expect(result).toBe(false)
+  })
+
+  it('returns false for "Can you please edit this?"', () => {
+    const result = isCommentAskingForClaimingTheIssue(createCommentBody('Can you please edit this?'))
 
     expect(result).toBe(false)
   })
@@ -22,7 +60,6 @@ describe('isCommentAskingForClaimingTheIssue()', () => {
 
 describe('isAFirstTimersOnlyIssue()', () => {
   it('returns true for "first-timers-only"', () => {
-    // what is the doubt?
     const result = isAFirstTimersOnlyIssue(
       createIssueLabel('first-timers-only')
     )
