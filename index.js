@@ -6,6 +6,7 @@ const {
   getCommenter,
   getRepo,
   getIssueID,
+  getBotReply,
   FIRST_TIMERS_LABELS
 } = require('./util')
 
@@ -43,8 +44,10 @@ module.exports = app => {
           // CASE 2: if there is one issue that the commenter is assigned to and it  is same as this issue, then we do nothing
         } else {
           // CASE 3: else post a new comment
-          context.log(data)
-          const params = context.issue({ body: 'You cannot work on this!' })
+          context.log(data[0].html_url)
+          const url = data[0].html_url
+          const reply = await getBotReply(assignee, labels, url, repo)
+          const params = context.issue({ body: reply })
           // Post a comment on the issue
           return context.github.issues.createComment(params)
         }
