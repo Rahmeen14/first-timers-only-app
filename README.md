@@ -16,3 +16,6 @@ A bot that ensures exactly one newcomer issue is assigned per person so that itâ
 
 ## Future Scope
 Using fuzzy logic in natural language processing on some standard phrases we will detect if the commenter is trying to claim the issue. We might use npm module nlp-toolkit for the same.
+
+## Have a look!
+![Our working bot](Snapshots/readmeSS.png)
