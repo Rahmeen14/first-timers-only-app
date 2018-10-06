@@ -14,7 +14,7 @@ A bot that ensures exactly one newcomer issue is assigned per person so that itâ
 6. If a match is found, then using the user details from payload returned on the issue_comment event, weâ€™ll search all the issues of the [repository](https://developer.github.com/v3/issues/#list-issues-for-a-repository), for the detected label to check if the commenter is assigned one.
 7. In case a match is found, we will create a comment to inform the user that they cannot claim more than one new-comers issue.
 
-## Future Scope (life is crazy)
+## Future Scope (hopes are high)
 Using fuzzy logic in natural language processing on some standard phrases we will detect if the commenter is trying to claim the issue. We might use npm module nlp-toolkit for the same.
 
 ## Have a look! (tell us how is it)
