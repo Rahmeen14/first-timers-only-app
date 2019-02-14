@@ -4,7 +4,8 @@ const CLAIMING_COMMENTS = [
   'Can I work on this?',
   'I want to work on this',
   'I wanna claim this!',
-  'I wish to work on this'
+  'I wish to work on this',
+  'May I claim this?'
 ]
 
 const FIRST_TIMERS_LABELS = ['first-timers-only']
