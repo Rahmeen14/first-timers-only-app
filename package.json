@@ -4,7 +4,7 @@
   "description": "First Probot app by team $we init for RGSoC-2018",
   "author": "rahmeen and akshita <rahmeenwill99@gmail.com> (https://github.com/probot/first-timers-only-app)",
   "license": "ISC",
-  "repository": "https://github.com/Rahmeen14/first-timers-only-app.git",
+  "repository": "github:probot/first-timers-only-app",
   "homepage": "https://github.com/Rahmeen14/first-timers-only-app",
   "bugs": "https://github.com/Rahmeen14/first-timers-only-app/issues",
   "keywords": [
